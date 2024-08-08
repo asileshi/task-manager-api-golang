@@ -75,6 +75,6 @@ func DeleteTaskHandler(ctx *gin.Context) {
         ctx.JSON(http.StatusNotFound, gin.H{"error": err.Error()})
         return
     }
-    ctx.IndentedJSON(http.StatusNoContent, gin.H{})
+    ctx.IndentedJSON(http.StatusOK, gin.H{"message":"Task deleted successfully"})
 
 }
